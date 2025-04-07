@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&display=swap");
+
+:root {
+  --primary-color: #4050a2;
+  --secondary-color: white;
+  --redColor: #88a2cf;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .container {
+  width: 20em;
+  height: 70vh;
+  padding: 1px 1px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: inset 1px 2px 10px 1px rgb(175, 197, 235);
+  display: flex;
+  color: white;
+  overflow: hidden;
+}
+
+.image img {
+  width: 40px;
+  height: 40px;
+  transform: translateY(10%);
+}
+.songList {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+  overflow: hidden;
+  border-bottom: 2px solid white;
+  width: 100%;
+}
+.songList h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.songList p {
+  font-size: 12px;
+}
+
+.songs {
+  width: 100%;
+}
+.songs p:first-child {
+  margin: 1em;
+  text-align: center;
+}

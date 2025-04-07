@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&display=swap");
+
+:root {
+  --primary-color: rgb(122, 51, 63);
+  --secondary-color: white;
+  --redColor: #cf8893c0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .container {
+  width: 20em;
+  padding: 1px 1px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: inset 1px 2px 10px 1px rgb(175, 197, 235);
+}
+@media screen and (max-width: 440px) and (min-width: 360px) {
+  section .container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .container .image {
+    transform: scale(1.2);
+  }
+  .songName {
+    transform: translateY(1em);
+    font-size: 1.6em;
+  }
+  .progressBar {
+    transform: translateY(3em);
+  }
+  .icons {
+    transform: translateY(3.2em);
+  }
+}
+@media screen and (max-width: 360px) {
+  section .container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container .image {
+    transform: scale(0.8) translateY(-30%);
+  }
+  .songName {
+    transform: translateY(-300%);
+  }
+  .progressBar {
+    transform: translateY(-8em);
+    height: 1px;
+  }
+  .icons {
+    transform: translateY(-8em);
+  }
+}
+@media screen and (max-width: 170px) {
+  section .container {
+    width: 180px;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .navIcons div {
+    visibility: hidden;
+  }
+  .container .image {
+    visibility: hidden;
+  }
+
+  .songName {
+    font-size: 0.8em;
+    transform: translateY(-1.5em);
+    position: absolute;
+    top: 1em;
+    left: 35%;
+  }
+  .progressBar {
+    max-width: 75%;
+    transform: translateY(-1.5em);
+    position: absolute;
+    top: 1.7em;
+    left: 13%;
+  }
+  .icons {
+    transform: scale(0.8) translate(-1em, 5.5em);
+    position: absolute;
+    top: 0;
+    left: 0.4em;
+  }
+  .icons div {
+    margin-right: 1em;
+  }
+  .volControl input {
+    display: none;
+  }
+}
+.container .image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 auto;
+  border: 2px solid white;
+  box-shadow: 2px 2px 10px 1px rgba(255, 255, 255, 0.877);
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container .image img {
+  width: 300px;
+  height: 600px;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  transform: translate(-20%, -10%);
+  scale: 0.9;
+}
+
+.container .icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--secondary-color);
+}
+.icons div {
+  width: 40px;
+  height: 40px;
+  background-color: var(--redColor);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons {
+  margin-bottom: 4em;
+  color: var(--secondary-color);
+}
+.navIcons {
+  display: flex;
+  justify-content: space-between;
+}
+.navIcons div {
+  width: 40px;
+  height: 40px;
+  background-color: var(--redColor);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.progress input {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 3px;
+  margin: 4em 0;
+  border-radius: 20px;
+}
+.progress input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border: 4px solid white;
+  border-radius: 50%;
+}
+.songName {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-top: 2em;
+  font-weight: 600;
+}
+.icons div:hover {
+  background-color: #27388e;
+  cursor: pointer;
+}
+.icons div:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #22031da6;
+}
+.icons div:nth-child(2) i {
+  font-size: 2em;
+}
+
+.info {
+  position: relative;
+}
+.volume {
+  -webkit-appearance: none;
+  transform: rotate(-90deg);
+  height: 0.5em;
+  width: 5em;
+  border-radius: 20px;
+  background-color: #ffffffc0;
+}
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(1, 1, 1);
+  border: 4px white solid;
+  border-radius: 50%;
+}
+
+.volText {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+}
+.volControl {
+  position: absolute;
+  right: 0;
+  top: -4em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2em;
+}
